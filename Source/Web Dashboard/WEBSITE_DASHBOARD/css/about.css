@@ -1,0 +1,172 @@
+:root {
+    --bg-card-dashboard: #f5f5f5; /* Xám trắng nhẹ */
+    --text-primary-dashboard: #344955; /* Xanh xám đậm */
+    --text-success-dashboard: #f4a261; /* Cam nhạt */
+    --text-warning-dashboard: #e76f51; /* Đỏ cam nhẹ */
+    --btn-bg-dashboard: #344955; /* Xanh xám đậm */
+    --btn-hover-bg-dashboard: #2a3b47; /* Xanh xám đậm hơn */
+}
+
+[data-theme="dark"] {
+    --bg-card-dashboard: #1f2a44; /* Xanh đen đậm */
+    --text-primary-dashboard: #b0c7d8; /* Xanh nhạt */
+    --text-success-dashboard: #f7b267; /* Cam nhạt */
+    --text-warning-dashboard: #e68a71; /* Đỏ cam nhạt */
+    --btn-bg-dashboard: #b0c7d8; /* Xanh nhạt */
+    --btn-hover-bg-dashboard: #8aa7c0; /* Xanh nhạt đậm hơn */
+}
+
+#about {
+    background-color: var(--bg-card-dashboard);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu để scroll */
+}
+#about h4 {
+    color: var(--text-primary-dashboard);
+}
+#about ul {
+    list-style: none;
+    padding-left: 0;
+}
+#about ul li {
+    margin-bottom: 10px;
+}
+#about ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+#about ul li a:hover {
+    color: var(--text-success-dashboard);
+}
+
+/* Timeline Styles */
+.timeline-section {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung vượt quá */
+    padding-bottom: 20px; /* Đảm bảo không bị cắt ở dưới */
+}
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--text-primary-dashboard);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    transform: translateY(20px);
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    transform: translateY(20px);
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-primary-dashboard);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::before {
+    right: -10px;
+}
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+}
+.timeline-content {
+    padding: 20px;
+    background-color: var(--bg-card-dashboard);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+.timeline-content h5 {
+    color: var(--text-primary-dashboard);
+}
+
+/* Tech Stack Styles */
+.tech-stack-section {
+    margin-top: 40px;
+}
+.tech-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-card-dashboard);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.tech-item i {
+    font-size: 2rem;
+    color: var(--text-primary-dashboard);
+    margin-bottom: 10px;
+}
+.tech-item p {
+    margin: 0;
+    color: var(--text-primary);
+}
+.tech-item:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Styles */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.contact-links li a:hover {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+    background-color: var(--bg-card-dashboard);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.contact-form-section h5 {
+    color: var(--text-primary-dashboard);
+    margin-bottom: 15px;
+}
+.contact-form-section .btn-primary {
+    background-color: var(--btn-bg-dashboard);
+    border-color: var(--btn-bg-dashboard);
+}
+.contact-form-section .btn-primary:hover {
+    background-color: var(--btn-hover-bg-dashboard);
+    border-color: var(--btn-hover-bg-dashboard);
+}

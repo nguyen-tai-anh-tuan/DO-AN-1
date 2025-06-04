@@ -1,0 +1,185 @@
+:root {
+    --bg-card-dashboard: #e0f7fa; /* Xanh lam nhạt */
+    --text-primary-dashboard: #00bcd4; /* Xanh ngọc */
+    --text-success-dashboard: #ffab40; /* Cam sáng */
+    --text-warning-dashboard: #ff6b6b; /* Đỏ hồng */
+    --btn-bg-dashboard: #00bcd4; /* Xanh ngọc */
+    --btn-hover-bg-dashboard: #00acc1; /* Xanh ngọc đậm */
+}
+
+[data-theme="dark"] {
+    --bg-card-dashboard: #2d2d2d; /* Xám tối */
+    --text-primary-dashboard: #4dd0e1; /* Xanh ngọc nhạt */
+    --text-success-dashboard: #ffb74d; /* Cam nhạt */
+    --text-warning-dashboard: #ff9999; /* Hồng nhạt */
+    --btn-bg-dashboard: #4dd0e1;
+    --btn-hover-bg-dashboard: #0288d1;
+}
+
+.chart-container {
+    background-color: var(--bg-card-dashboard);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out; /* Hiệu ứng mờ khi biểu đồ cập nhật */
+}
+
+/* Hiệu ứng khi biểu đồ được cập nhật */
+.chart-container.updated {
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Filter Styles */
+.filter-container {
+    background-color: var(--bg-card-dashboard);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease; /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.filter-container:hover {
+    transform: scale(1.02); /* Phóng to nhẹ khi hover */
+}
+
+.filter-container label {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--text-primary-dashboard);
+    transition: color 0.3s ease; /* Chuyển màu mượt mà */
+}
+
+.filter-container label:hover {
+    color: var(--btn-hover-bg-dashboard); /* Đổi màu khi hover */
+}
+
+.filter-container .form-select {
+    background-color: var(--bg-card-dashboard);
+    color: var(--text-dark);
+    border-color: var(--text-primary-dashboard);
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển màu viền và nền */
+}
+
+.filter-container .form-select:hover,
+.filter-container .form-select:focus {
+    border-color: var(--btn-hover-bg-dashboard);
+    background-color: #f0f0f0; /* Nền sáng hơn khi hover hoặc focus */
+}
+
+.filter-container #trendType {
+    background-color: var(--bg-card-dashboard);
+    color: var(--text-dark);
+    border-color: var(--text-primary-dashboard);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filter-container #trendType:hover,
+.filter-container #trendType:focus {
+    border-color: var(--btn-hover-bg-dashboard);
+    background-color: #f0f0f0;
+}
+
+.btn-primary-dashboard {
+    background-color: var(--btn-bg-dashboard);
+    border-color: var(--btn-bg-dashboard);
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Hiệu ứng màu và nhấn nút */
+}
+
+.btn-primary-dashboard:hover {
+    background-color: var(--btn-hover-bg-dashboard);
+    border-color: var(--btn-hover-bg-dashboard);
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.btn-primary-dashboard:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+.btn-success {
+    background-color: var(--text-success-dashboard);
+    border-color: var(--text-success-dashboard);
+    transition: opacity 0.3s ease, transform 0.1s ease; /* Hiệu ứng mờ và nhấn nút */
+}
+
+.btn-success:hover {
+    background-color: var(--text-success-dashboard);
+    opacity: 0.8;
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.btn-success:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+.btn-danger {
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Hiệu ứng cho nút "Xóa dữ liệu cũ" */
+}
+
+.btn-danger:hover {
+    opacity: 0.8;
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.btn-danger:active {
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+/* Table Styles */
+#historyTable,
+#controlHistoryTable,
+#alertHistoryTable {
+    background-color: var(--bg-card-dashboard);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#historyTable tr,
+#controlHistoryTable tr,
+#alertHistoryTable tr {
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+#historyTable tr:hover,
+#controlHistoryTable tr:hover,
+#alertHistoryTable tr:hover {
+    background-color: rgba(0, 188, 212, 0.1); /* Nền sáng hơn khi hover */
+}
+
+/* Hiệu ứng làm nổi bật bản ghi mới */
+#historyTable tr.new-record,
+#controlHistoryTable tr.new-record,
+#alertHistoryTable tr.new-record {
+    animation: highlight 2s ease-out; /* Hiệu ứng sáng lên trong 2 giây */
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(0, 188, 212, 0.5); /* Màu sáng ban đầu */
+    }
+    100% {
+        background-color: transparent; /* Trở về màu nền ban đầu */
+    }
+}
+
+#alertHistoryTable {
+    background-color: var(--bg-card-dashboard);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#alertHistoryTable tr td:first-child {
+    color: var(--text-warning-dashboard);
+}
+
+.filter-container .form-check-label {
+    color: var(--text-primary-dashboard);
+    transition: color 0.3s ease; /* Chuyển màu mượt mà */
+}
+
+.filter-container .form-check-label:hover {
+    color: var(--btn-hover-bg-dashboard); /* Đổi màu khi hover */
+}

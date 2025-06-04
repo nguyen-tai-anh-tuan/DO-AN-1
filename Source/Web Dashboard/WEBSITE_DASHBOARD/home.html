@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="image/icon_smart_home1.jpg" alt="Smart Home Logo" height="30" class="d-inline-block align-text-top">
+                Smart Home
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="devices.html">Devices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="authDropdown">
+                            <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="signup.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span id="clock" class="clock"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="themeToggle"><i class="fas fa-sun"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <section id="home">
+            <div class="text-center">
+                <h1>Chào mừng đến với Smart Home</h1>
+                <p class="lead">Giám sát và điều khiển ngôi nhà thông minh của bạn một cách dễ dàng và tiện lợi.</p>
+                <!-- Carousel -->
+                <div id="homeCarousel" class="carousel slide my-4" data-bs-ride="carousel" data-bs-pause="hover">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="https://cdn.thingsup.io/wp-content/uploads/2023/09/modern-smart-home_258219-113-1.jpg.webp" class="d-block w-100" alt="Giám sát môi trường">
+                            <div class="carousel-caption">
+                                <h5>Giám sát môi trường</h5>
+                                <p>Theo dõi nhiệt độ, độ ẩm, khí gas mọi lúc mọi nơi.</p>
+                                <a href="devices.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="d-block w-100" alt="Điều khiển thiết bị">
+                            <div class="carousel-caption">
+                                <h5>Điều khiển thiết bị</h5>
+                                <p>Bật/tắt đèn, quạt, điều hòa từ xa dễ dàng.</p>
+                                <a href="devices.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="d-block w-100" alt="An toàn và tiết kiệm">
+                            <div class="carousel-caption">
+                                <h5>An toàn và tiết kiệm</h5>
+                                <p>Ngôi nhà thông minh, an toàn và tiết kiệm năng lượng.</p>
+                                <a href="about.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://youhomeautomation.io/wp-content/uploads/2023/06/smart-screen-with-smart-home-with-modern-living-ro-2023-05-05-03-00-11-utc-870x460.jpg" class="d-block w-100" alt="Tự động hóa chiếu sáng">
+                            <div class="carousel-caption">
+                                <h5>Tự động hóa chiếu sáng</h5>
+                                <p>Đèn bật/tắt tự động dựa trên cảm biến ánh sáng.</p>
+                                <a href="devices.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://advancecad.edu.vn/wp-content/uploads/2018/03/1.png" class="d-block w-100" alt="Quản lý năng lượng">
+                            <div class="carousel-caption">
+                                <h5>Quản lý năng lượng</h5>
+                                <p>Tối ưu hóa tiêu thụ điện với công nghệ thông minh.</p>
+                                <a href="about.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://haiduycamera.com/Uploads/files/nha-thong-minh-bang-cam-ung.jpg" class="d-block w-100" alt="Bảo mật nâng cao">
+                            <div class="carousel-caption">
+                                <h5>Bảo mật nâng cao</h5>
+                                <p>Hệ thống camera và khóa thông minh bảo vệ ngôi nhà.</p>
+                                <a href="about.html" class="btn btn-sm btn-outline-light mt-2">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- Feature Highlights -->
+                <div class="row my-5">
+                    <h2 class="text-center mb-4">Tính năng nổi bật</h2>
+                    <div class="col-md-4 mb-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-thermometer-half fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Giám sát môi trường</h5>
+                                <p class="card-text">Theo dõi nhiệt độ, độ ẩm, khí gas trong nhà mọi lúc mọi nơi.</p>
+                                <a href="devices.html" class="btn btn-outline-primary">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Điều khiển thông minh</h5>
+                                <p class="card-text">Bật/tắt thiết bị từ xa, tự động hóa theo lịch trình.</p>
+                                <a href="devices.html" class="btn btn-outline-primary">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                                <h5 class="card-title">Bảo mật nâng cao</h5>
+                                <p class="card-text">Hệ thống camera và khóa thông minh đảm bảo an toàn.</p>
+                                <a href="about.html" class="btn btn-outline-primary">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Demo -->
+                <div class="video-container my-4">
+                    <h3>Video Demo</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KcSHk92-oF8?si=KTmLJ-t_R1eio6jI" title="Smart Home Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Weather Widget -->
+                <div class="weather-widget my-4">
+                    <h3>Thời tiết hiện tại</h3>
+                    <div id="weatherInfo">
+                        <p><i class="fas fa-thermometer-half"></i> Nhiệt độ: <span id="temperature">Đang tải...</span></p>
+                        <p><i class="fas fa-tint"></i> Độ ẩm: <span id="humidity">Đang tải...</span></p>
+                    </div>
+                </div>
+
+                <p>Dự án Smart Home giúp bạn theo dõi các thông số môi trường như nhiệt độ, độ ẩm, khí gas và điều khiển các thiết bị như đèn, quạt từ bất kỳ đâu.</p>
+                <div class="mt-3">
+                    <a href="index.html" class="btn btn-primary btn-lg me-2">Xem Dashboard</a>
+                    <button class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#quickDemoModal">Trải nghiệm nhanh</button>
+                </div>
+
+                <!-- Quick Demo Modal -->
+                <div class="modal fade" id="quickDemoModal" tabindex="-1" aria-labelledby="quickDemoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="quickDemoModalLabel">Trải nghiệm nhanh Smart Home</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Thử điều khiển thiết bị thông minh ngay tại đây!</p>
+                                <div class="device-control">
+                                    <h6>Đèn phòng khách</h6>
+                                    <button id="lightToggle" class="btn btn-outline-primary mb-2">Bật</button>
+                                    <p>Trạng thái: <span id="lightStatus">Tắt</span></p>
+                                </div>
+                                <div class="device-control">
+                                    <h6>Quạt phòng ngủ</h6>
+                                    <button id="fanToggle" class="btn btn-outline-primary mb-2">Bật</button>
+                                    <p>Trạng thái: <span id="fanStatus">Tắt</span></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Smart Home Project - Giám sát và điều khiển ngôi nhà thông minh.</p>
+        <p>© 2025 Smart Home Project by NGUYEN TAI ANH TUAN. All rights reserved.</p>
+        <p>
+            <a href="mailto:nguyentaianhtuan2004@gmail.com" class="text-white mx-3"><i class="fas fa-envelope"></i></a>
+            <a href="tel:0396039917" class="text-white mx-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/nguyen-tai-anh-tuan" class="text-white mx-3"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tuan-nguyen-2970362b2/" class="text-white mx-3"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UC1Sdrg8OTLWPyQAJg-vkrDQ" class="text-white mx-3"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100042922034925&locale=vi_VN" class="text-white mx-3"><i class="fab fa-facebook"></i></a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Common JS -->
+    <script src="js/common.js"></script>
+    <!-- Home JS -->
+    <script src="js/home.js"></script>
+</body>
+</html>

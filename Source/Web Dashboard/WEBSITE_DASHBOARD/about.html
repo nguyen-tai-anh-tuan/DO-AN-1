@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home - About</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- About CSS -->
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="image/icon_smart_home1.jpg" alt="Smart Home Logo" height="30" class="d-inline-block align-text-top">
+                Smart Home
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="devices.html">Devices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="authDropdown">
+                            <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="signup.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span id="clock" class="clock"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="themeToggle"><i class="fas fa-sun"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <section id="about">
+            <h2 class="mb-4 fade-in">Giới thiệu</h2>
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <h4>Về tôi</h4>
+                    <p>Tôi là NGUYEN TAI ANH TUAN, một sinh viên đam mê công nghệ và IoT. Tôi yêu thích việc xây dựng các giải pháp thông minh để cải thiện cuộc sống, từ hệ thống giám sát môi trường đến điều khiển thiết bị tự động.</p>
+                    <p>Liên hệ với tôi qua:</p>
+                    <ul class="contact-links">
+                        <li>Email: <a href="mailto:nguyentaianhtuan2004@gmail.com">nguyentaianhtuan2004@gmail.com</a></li>
+                        <li>Zalo: <a href="tel:0396039917">0396039917</a></li>
+                        <li>GitHub: <a href="https://github.com/nguyen-tai-anh-tuan">nguyen-tai-anh-tuan</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/tuan-nguyen-2970362b2/">Tuan Nguyen</a></li>
+                        <li>YouTube: <a href="https://www.youtube.com/channel/UC1Sdrg8OTLWPyQAJg-vkrDQ">Smart Home Channel</a></li>
+                        <li>Facebook: <a href="https://www.facebook.com/profile.php?id=100042922034925">Tuan Nguyen</a></li>
+                    </ul>
+                    <!-- Contact Form -->
+                    <div class="contact-form-section mt-4">
+                        <h5>Gửi tin nhắn cho tôi</h5>
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="contact-name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="contact-name" placeholder="Nhập họ và tên" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contact-email" placeholder="nhap@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-message" class="form-label">Tin nhắn</label>
+                                <textarea class="form-control" id="contact-message" rows="3" placeholder="Nhập tin nhắn của bạn" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-location" class="form-label">Địa điểm (tùy chọn)</label>
+                                <input type="text" class="form-control" id="contact-location" placeholder="Nhập địa chỉ hoặc để trống">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <h4>Về dự án</h4>
+                    <p>Smart Home Project là một hệ thống giám sát và điều khiển ngôi nhà thông minh, tích hợp các cảm biến (nhiệt độ, độ ẩm, khí gas) và thiết bị (đèn, quạt, điều hòa). Dự án được thiết kế để cung cấp giao diện thân thiện, dễ sử dụng và hiệu quả.</p>
+                    <p>Mục tiêu: Tạo ra một ngôi nhà thông minh, an toàn và tiết kiệm năng lượng.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="timeline-section mt-5 fade-in">
+                <h4>Hành trình phát triển</h4>
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2023">
+                        <div class="timeline-content">
+                            <h5>2023</h5>
+                            <p>Bắt đầu học về IoT và làm quen với STM32, ESP32.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-content">
+                            <h5>2024</h5>
+                            <p>Ý tưởng Smart Home ra đời, thử nghiệm cảm biến nhiệt độ và độ ẩm.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-content">
+                            <h5>2025</h5>
+                            <p>Hoàn thiện hệ thống với giao diện web và điều khiển thiết bị.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="Future">
+                        <div class="timeline-content">
+                            <h5>Tương Lai</h5>
+                            <p>Tích hợp AI và điều khiển bằng giọng nói.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Section -->
+            <div class="tech-stack-section mt-5 fade-in">
+                <h4>Công nghệ sử dụng</h4>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tech-item">
+                            <i class="fas fa-microchip"></i>
+                            <p>Phần cứng: STM32F407, ESP32</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tech-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <p>Cảm biến: DHT22, BH1750</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tech-item">
+                            <i class="fab fa-fire-alt"></i>
+                            <p>Backend: Firebase</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <p>Frontend: HTML, CSS, JS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tech-item">
+                            <i class="fab fa-arduino"></i>
+                            <p>Ngôn ngữ: Arduino (ESP32), C (STM32)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Smart Home Project - Giám sát và điều khiển ngôi nhà thông minh.</p>
+        <p>© 2025 Smart Home Project by NGUYEN TAI ANH TUAN. All rights reserved.</p>
+        <p>
+            <a href="mailto:nguyentaianhtuan2004@gmail.com" class="text-white mx-3"><i class="fas fa-envelope"></i></a>
+            <a href="tel:0396039917" class="text-white mx-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/nguyen-tai-anh-tuan" class="text-white mx-3"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tuan-nguyen-2970362b2/" class="text-white mx-3"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UC1Sdrg8OTLWPyQAJg-vkrDQ" class="text-white mx-3"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100042922034925&locale=vi_VN" class="text-white mx-3"><i class="fab fa-facebook"></i></a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Common JS -->
+    <script src="js/common.js"></script>
+    <!-- About JS -->
+    <script src="js/about.js"></script>
+</body>
+</html>

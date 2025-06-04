@@ -1,0 +1,4 @@
+../Core/Src/BH1750.c:3:6:BH1750_init_i2c	16	static
+../Core/Src/BH1750.c:8:18:BH1750_init_dev_struct	32	static
+../Core/Src/BH1750.c:26:6:BH1750_init_dev	32	static
+../Core/Src/BH1750.c:39:6:BH1750_poll	32	static
